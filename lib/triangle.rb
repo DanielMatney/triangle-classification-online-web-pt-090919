@@ -10,6 +10,9 @@ class Triangle
     if @side1 == @side2 && @side1 == @side3
       return :equilateral
     end
+    if @side1 == @side2 || @side1 == @side3 || @side2 == @side3
+      return :isosceles
+    end
   end
   
   class TriangleError < StandardError
