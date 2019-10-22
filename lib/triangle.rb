@@ -14,7 +14,7 @@ class Triangle
       return :isosceles
     end
     if @side1 + @side2 <= @side3 || @side1 + @side3 <= @side2 || @side2 + @side3 <= @side1
-      return "invalid triangle"
+      raise TriangleError
     end
     return :scalene
   end
